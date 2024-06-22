@@ -1,0 +1,26 @@
+<div class="latest_article">
+    <a href="/post/66758ca8329a264748854335">
+        <img src="img/chlopi.jpg" />
+    </a>
+    <label id="title">
+        Bóg, honor, pańszczyzna
+    </label>
+</div>
+
+<section class="articles">
+    <% data.forEach(post => { %> 
+        <div class="article">
+            <div class="img-preview">
+                <a href="/post/<%= post._id %>">
+                    <img class="img-preview" src="<%= post.img %>" />
+                </a>
+            </div>
+            <h3><%= post.title %></h3>
+            <h5><%= post.createdAt.toDateString() %></h5>
+            <h4>
+                <%= post.body %>
+            </h4>
+        </div>
+    <% }) %>
+    
+</section>
